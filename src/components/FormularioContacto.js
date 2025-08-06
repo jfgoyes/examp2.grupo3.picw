@@ -68,59 +68,67 @@ function FormularioContacto({ onAdd, contactoEditar, modoOscuro }) {
 
   // Parte 2: Paguay Bonilla Julio Cesar
 
-  return (
-    <form onSubmit={handleSubmit} className="mb-4">
-      <div className="row">
-        <div className="col-md-6 mb-3">
-          <input
-            type="text"
-            name="nombre"
-            className="form-control"
-            placeholder="Nombre"
-            value={contact.nombre}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6 mb-3">
-          <input
-            type="email"
-            name="email"
-            className="form-control"
-            placeholder="Correo electrónico"
-            value={contact.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6 mb-3">
-          <input
-            type="text"
-            name="telefono"
-            className="form-control"
-            placeholder="Teléfono"
-            value={contact.telefono}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6 mb-3">
-          <input
-            type="text"
-            name="direccion"
-            className="form-control"
-            placeholder="Dirección"
-            value={contact.direccion}
-            onChange={handleChange}
-            required
-          />
-        </div>
+return (
+  // Se retorna un formulario que ejecuta la función handleSubmit cuando se envía
+  <form onSubmit={handleSubmit} className="mb-4">
+    <div className="row"> {/* Contenedor con clase row para usar el sistema de grillas de Bootstrap */}
+      
+      <div className="col-md-6 mb-3"> {/* Columna que ocupa 6 columnas del grid en pantallas medianas */}
+        <input
+          type="text" // Campo de entrada tipo texto
+          name="nombre" // Nombre del campo para identificarlo
+          className="form-control" // Clase de Bootstrap para estilo del input
+          placeholder="Nombre" // Texto que se muestra cuando el campo está vacío
+          value={contact.nombre} // Valor del campo asociado al estado contact.nombre
+          onChange={handleChange} // Función que actualiza el estado cuando el usuario escribe
+          required // Campo obligatorio
+        />
       </div>
-      <button type="submit" className="btn btn-success w-100">
-        {contactoEditar ? "Guardar Cambios" : "Agregar Contacto"}
-      </button>
-    </form>
-  );
+
+      <div className="col-md-6 mb-3">
+        <input
+          type="email" // Campo de entrada para correos electrónicos
+          name="email"
+          className="form-control"
+          placeholder="Correo electrónico"
+          value={contact.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="col-md-6 mb-3">
+        <input
+          type="text" // Campo de texto para ingresar número de teléfono
+          name="telefono"
+          className="form-control"
+          placeholder="Teléfono"
+          value={contact.telefono}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="col-md-6 mb-3">
+        <input
+          type="text" // Campo de texto para ingresar dirección
+          name="direccion"
+          className="form-control"
+          placeholder="Dirección"
+          value={contact.direccion}
+          onChange={handleChange}
+          required
+        />
+      </div>
+    </div>
+
+    <button type="submit" className="btn btn-success w-100">
+      {/* Botón que cambia el texto dependiendo si se está editando o agregando un contacto */}
+      {contactoEditar ? "Guardar Cambios" : "Agregar Contacto"}
+    </button>
+  </form>
+);
 }
 
+// Exporta el componente FormularioContacto para que pueda ser utilizado en otros archivos
 export default FormularioContacto;
