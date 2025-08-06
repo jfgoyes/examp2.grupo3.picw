@@ -66,7 +66,7 @@ function FormularioContacto({ onAdd, contactoEditar, modoOscuro }) {
     ? "form-control bg-secondary text-white border-0"
     : "form-control";
 
-  // Parte 2: Paguay Bonilla Julio Cesar.
+  // Parte 2: Paguay Bonilla Julio Cesar
 
   return (
     <form onSubmit={handleSubmit} className="mb-4">
