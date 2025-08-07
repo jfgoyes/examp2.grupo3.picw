@@ -1,3 +1,5 @@
+// Parte 4: Herrera Juela Willian Adrian
+
 // Componente ModalConfirmacion: muestra una ventana emergente para confirmar si el usuario quiere eliminar un contacto
 function ModalConfirmacion({ contacto, onConfirm, onCancel, modoOscuro }) {
   // Si no hay un contacto seleccionado, no se muestra el modal

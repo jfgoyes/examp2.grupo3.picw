@@ -54,4 +54,29 @@ function App() {
     }
   };
 
+    // Función que elimina el contacto seleccionado al confirmar desde el modal
+  const confirmarEliminacion = () => {
+    const nuevosContactos = contactos.filter(c => c.id !== contactoEliminar.id);
+    setContactos(nuevosContactos); // Se actualiza la lista sin el eliminado
+    setContactoEliminar(null); // Se cierra el modal
+  };
+
+  // Función para cancelar la eliminación y cerrar el modal
+  const cancelarEliminacion = () => {
+    setContactoEliminar(null);
+  };
+
+   return (
+    <div className="container mt-4">
+      {/* Este modal se activa solo si contactoEliminar tiene un valor */}
+      {contactoEliminar && (
+        <ConfirmModal
+          contacto={contactoEliminar}
+          onConfirm={confirmarEliminacion}
+          onCancel={cancelarEliminacion}
+          modoOscuro={modoOscuro}
+        />
+      )}
+    </div>
+  );
 }
