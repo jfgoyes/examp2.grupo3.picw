@@ -53,3 +53,5 @@ function App() {
       setContactos([...contactos, { ...nuevo, id: Date.now() }]);
     }
   };
+
+}
