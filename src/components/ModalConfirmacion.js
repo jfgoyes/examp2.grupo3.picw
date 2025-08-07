@@ -6,10 +6,10 @@ function ModalConfirmacion({ contacto, onConfirm, onCancel, modoOscuro }) {
   if (!contacto) return null;
 
   return (
-    // Este es el contenedor principal del modal. Se muestra con una opacidad de fondo distinta si está en modo oscuro o claro
+    // Definimos el contenedor principal del modal.
     <div className={`modal fade show`} tabIndex="-1" style={{ display: 'block', backgroundColor: modoOscuro ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.5)' }}>
       <div className="modal-dialog">
-        {/* Contenido del modal. Cambia el color de fondo y el texto si el modo oscuro está activado */}
+        {/* Colocamos el contenido del modal. */}
         <div className={`modal-content ${modoOscuro ? 'bg-secondary text-light' : ''}`}>
           
           {/* Encabezado del modal */}
@@ -17,7 +17,7 @@ function ModalConfirmacion({ contacto, onConfirm, onCancel, modoOscuro }) {
             {/* Título del modal */}
             <h5 className="modal-title">Confirmar Eliminación</h5>
             
-            {/* Botón para cerrar el modal sin eliminar. Llama a la función onCancel cuando se hace clic */}
+            {/* Botón para cerrar el modal sin eliminar. Llamamos a la función onCancel cuando se hace click. */}
             <button
               type="button"
               className="btn-close"
@@ -26,19 +26,19 @@ function ModalConfirmacion({ contacto, onConfirm, onCancel, modoOscuro }) {
             ></button>
           </div>
 
-          {/* Cuerpo del modal. Muestra el mensaje con el nombre del contacto que se va a eliminar */}
+          {/* Mostramos el mensaje de advertencia junto al nombre del contacto a eliminar */}
           <div className="modal-body">
             <p>¿Estás seguro que deseas eliminar a <strong>{contacto.nombre}</strong>?</p>
           </div>
 
-          {/* Pie del modal con los botones de acción */}
+          {/* Botones del modal establecido */}
           <div className="modal-footer">
-            {/* Botón para cancelar la eliminación. Llama a la función onCancel */}
+            {/* Botón para cancelar la eliminación, aqui se usa onCancel */}
             <button className="btn btn-secondary" onClick={onCancel}>
               Cancelar
             </button>
 
-            {/* Botón para confirmar la eliminación. Llama a la función onConfirm */}
+            {/* Botón para confirmar la eliminación, usamos onConfirm */}
             <button className="btn btn-danger" onClick={onConfirm}>
               Eliminar
             </button>
@@ -49,5 +49,5 @@ function ModalConfirmacion({ contacto, onConfirm, onCancel, modoOscuro }) {
   );
 }
 
-// Exportamos el componente para poder usarlo en otras partes del proyecto
+// Exportamos el componente para poder usarlo en el app.
 export default ModalConfirmacion;

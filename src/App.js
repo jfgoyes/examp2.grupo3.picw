@@ -1,17 +1,12 @@
 // Parte 5: Torres Diaz Tiffani Nathalia
 
-// Importamos los estilos de Bootstrap para los componentes visuales
+// Importamos las librerías de bootstrap para estilos y funcionalidades.
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Importamos los scripts necesarios de Bootstrap para funcionalidades interactivas como modales y dropdowns
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-// Importamos hooks de React para manejo de estado, efectos y optimización de cálculos
+// Definimos la ruta de los componentes.
 import { useState, useEffect, useMemo } from "react";
-// Importamos el componente para el formulario de contacto
 import ContactForm from "./components/FormularioContacto";
-// Importamos el componente visual que muestra cada contacto
 import ContactCard from "./components/VisualizacionContacto";
-// Importamos el componente para el modal de confirmación al eliminar
 import ConfirmModal from "./components/ModalConfirmacion";
 
 function App() {
