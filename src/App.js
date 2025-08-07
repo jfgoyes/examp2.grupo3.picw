@@ -60,14 +60,14 @@ function App() {
 
 // Parte 6: Yampuezan Burbano Veronica Janeth
 
-  // Creamos la función para eliminar un contacto por su id
+  // Implementamos la función para  eliminar un contacto por su id
   const eliminarContacto = (id) => {
     const filtrados = contactos.filter((c) => c.id !== id);
     setContactos(filtrados);
     setContactoEliminar(null);
   };
 
-  // Implementamos useMemo para filtrar y ordenar los contactos según búsqueda, filtro y orden
+  // Utilizamos useMemo para gestionar el filtrado y ordenar los contactos según búsqueda, filtro y orden
   const contactosFiltrados = useMemo(() => {
     let result = [...contactos];
 
