@@ -81,7 +81,7 @@ return (
           placeholder="Nombre" // Texto que se muestra cuando el campo está vacío
           value={contact.nombre} // Valor del campo asociado al estado contact.nombre
           onChange={handleChange} // Función que actualiza el estado cuando el usuario escribe
-          required // Campo obligatorio
+          required // Campo obligatorio requerido
         />
       </div>
 
