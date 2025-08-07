@@ -112,18 +112,49 @@ function App() {
 // Parte 7: Goyes Arcalle Job Francesco
 
   return (
+
     // Creamos un contenedor principal con clases de Bootstrap y modo oscuro/claro
     <div className={`container py-4 ${modoOscuro ? 'bg-dark text-light' : 'bg-light text-dark'}`} style={{ minHeight: '100vh' }}>
       
-      {/* Mostramos los nombres de los integrantes del grupo */}
-      <h2 className="text-center mb-4">Proyecto final - Grupo 3</h2>
-      <h2 className="text-center mb-4">Herrera Juela Willian Adrian</h2>
-      <h2 className="text-center mb-4">Torres Diaz Tiffani Nathalia</h2>
-      <h2 className="text-center mb-4">Paguay Bonilla Julio Cesar</h2>
-      <h2 className="text-center mb-4">Armijos Hurtado Klever Stalin</h2>
-      <h2 className="text-center mb-4">Goyes Arcalle Job Francesco</h2>
-      <h2 className="text-center mb-4">Yampuezan Burbano Veronica Janeth</h2>
-      <h2 className="text-center mb-4">Caluña Rojas Steven German</h2>
+      {/* Carátula institucional */}
+    <div className="text-center mb-5" style={{ fontFamily: 'Times New Roman, serif', fontSize: '24px' }}>
+      <p>
+        <a href="https://www.espe.edu.ec/" target="_blank">
+          <img src="https://www.espe.edu.ec/wp-content/uploads/2023/03/espe.png" alt="espelogocaratula" className="img-fluid mb-3" />
+        </a>
+        <br /><br />
+        MODALIDAD EN LÍNEA
+        <br />
+        INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN
+        <br />
+        PROGRAMACIÓN INTEGRATIVA DE COMPONENTES WEB
+        <br />
+        Proyecto 2 (Examen) - SEGUNDO PARCIAL
+        <br /><br />
+        <strong>Estudiantes (Grupo 3):</strong>
+        <p>
+          Herrera Juela Willian Adrian<br></br>
+          Caluña Rojas Steven German<br></br>
+          Torres Diaz Tiffani Nathalia<br></br>
+          Paguay Bonilla Julio Cesar<br></br>
+          Armijos Hurtado Klever Stalin<br></br>
+          Goyes Arcalle Job Francesco<br></br>
+          Yampuezan Burbano Veronica Janeth<br></br>
+          Caluña Rojas Steven German
+        </p>
+        <br />
+        <strong>TUTOR:</strong> Ing. Criollo Chanchicocha, Vilmer David
+        <br />
+        <strong>NRC:</strong> 23407
+        <br />
+        <strong>FECHA:</strong> 06/08/2025
+      </p>
+    </div>
+
+    {/* Título del sistema */}
+    <h2 className="text-center mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>
+      Agenda de Contactos Inteligente con React, LocalStorage y Bootstrap
+    </h2>
 
       {/* Implementamos botón para alternar entre modo oscuro y claro */}
       <div className="d-flex justify-content-end mb-3">
