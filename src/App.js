@@ -98,7 +98,7 @@ function App() {
     return result;
   }, [contactos, busqueda, orden, filtroLetra]);
 
-  // Creamos una lista de letras únicas con las que empiezan los nombres de los contactos
+  // Creamos una lista de letras únicas con las que inician los nombres de los contactos
   const letrasUnicas = useMemo(() => {
     const letras = new Set(contactos.map(c => c.nombre[0].toUpperCase()));
     return Array.from(letras).sort();
